@@ -1,5 +1,11 @@
 # clj-named-leveldb
 
+[![Circle CI](https://circleci.com/gh/shriphani/clj-named-leveldb.svg?style=shield&circle-token=351e60b226583e6e24fece5d35f03fbb4f50d3bc)](https://circleci.com/gh/shriphani/clj-named-leveldb)
+
+
+[![Clojars Project](https://img.shields.io/clojars/v/clj-named-leveldb.svg)](https://clojars.org/clj-named-leveldb)
+
+
 leveldb doesn't give you named databases.
 
 This repo uses a hack to fix that - essentially prefix keys.
