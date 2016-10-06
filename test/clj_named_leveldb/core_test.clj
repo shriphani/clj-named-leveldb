@@ -24,4 +24,25 @@
       (is
        (= "2"
           (leveldb/get (:db beta-db)
-                       "beta2"))))))
+                       "beta2")))
+
+      (is
+       (nil?
+        (leveldb/get (:db beta-db)
+                     "beta1")))
+
+      (is
+       (nil?
+        (leveldb/get (:db alpha-db)
+                     "alpha2")))
+
+      (delete alpha-db "1")
+      (delete beta-db "2")
+
+      (is
+       (nil?
+        (get alpha-db "1")))
+
+      (is
+       (nil?
+        (get beta-db "2"))))))
