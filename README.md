@@ -1,6 +1,6 @@
 # clj-named-leveldb
 
-[![Circle CI](https://circleci.com/gh/shriphani/clj-named-leveldb.svg?style=shield&circle-token=351e60b226583e6e24fece5d35f03fbb4f50d3bc)](https://circleci.com/gh/shriphani/clj-named-leveldb)
+[![Circle CI](https://circleci.com/gh/shriphani/clj-named-leveldb.svg?style=shield&circle-token=4747a60c1cdce5eb5915169c50c8d59c5a15d2df)](https://circleci.com/gh/shriphani/clj-named-leveldb)
 
 
 [![Clojars Project](https://img.shields.io/clojars/v/clj-named-leveldb.svg)](https://clojars.org/clj-named-leveldb)
