@@ -21,16 +21,30 @@
                  (str name k))))
 
 (defn put
-  [named-db k v]
+  [named-db & entries]
   (let [db    (:db named-db)
-        name  (:name named-db)]
-    (leveldb/put db
-                 (str name k)
-                 v)))
+        name  (:name named-db)
+
+        k-vs  (partition 2 entries)
+
+        put-entries (flatten
+                     (map
+                      (fn [[k v]]
+                        [(str name k) v])
+                      k-vs))
+
+        args (cons db
+                   put-entries)]
+
+    (apply leveldb/put
+           args)))
 
 (defn delete
-  [named-db k]
+  [named-db & entries]
   (let [db    (:db named-db)
         name  (:name named-db)]
-    (leveldb/delete db
-                    (str name k))))
+    (apply leveldb/delete
+           (cons db
+                 (map
+                  #(str name %)
+                  entries)))))
