@@ -29,7 +29,7 @@
                  v)))
 
 (defn delete
-  [named-db k v]
+  [named-db k]
   (let [db    (:db named-db)
         name  (:name named-db)]
     (leveldb/delete db
